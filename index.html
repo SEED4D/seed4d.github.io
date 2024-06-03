@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description" content="Few-view Reconstruction of Large-Scale Scenes from Outward-Looking Cameras">
-  <meta name="keywords" content="3D,CV, NeRF, Scene Representation, Few-View Reconstruction, 3D Reconstruction, Autonomous Vehicles">
+  <meta name="keywords" content="Scene Representation, Few-View Reconstruction, 3D Reconstruction, Autonomous Vehicles">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>6Img-to-3D</title>
+  <title>SEED4D</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -68,10 +68,13 @@
             <h1 class="title is-1 publication-title"><a href="index.html">6Img-to-3D</a></h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
+                <a href="https://twitter.com/marten_marius">Marius Kaestingschaefer*</a><sup>2</sup>,</span>
                 <a href="https://github.com/tgieruc">Théo Gieruc*</a><sup>1,2</sup>,</span>
-              <a href="https://twitter.com/marten_marius">Marius Kaestingschaefer*</a><sup>2</sup>,</span>
-              <a href="https://www.linkedin.com/in/dr-ing-sebastian-bernhard-79a763205/"">Sebastian Bernhard</a><sup>2</sup>,</span>
-                <a href=" https://people.epfl.ch/mathieu.salzmann">Mathieu Salzmann</a><sup>1</sup></span>
+                <a href="https://www.linkedin.com/in/dr-ing-sebastian-bernhard-79a763205/"">Sebastian Bernhard</a><sup>2</sup>,</span>
+                <a href="https://sites.google.com/view/djcampbell">Dylan Campbell</a><sup>1</sup></span>
+                <a href="https://eldar.insafutdinov.com/">Eldar Insafutdinov</a><sup>1</sup></span>
+                <a href="https://www.linkedin.com/in/eyvaz-najafli-43407618b/">Eyvaz Najafli </a><sup>1</sup></span>
+                <a href="https://lmb.informatik.uni-freiburg.de/people/brox/index.en.html">Thomas Brox </a><sup>1</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -84,7 +87,7 @@
               <div class="publication-links">
                <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2404.12378.pdf"
+                <a href="https://arxiv.org/coming-soon.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -93,7 +96,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2404.12378"
+                <a href="https://arxiv.org/abs/coming-soon"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -103,7 +106,7 @@
               </span>
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/@6Img-to-3D"
+                  <a href="https://www.youtube.com/@seed4d"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -113,7 +116,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/continental/6Img-to-3D"
+                  <a href="https://github.com/continental/seed4D"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -131,43 +134,6 @@
 
   </section>
 
-  <section>
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">6Img-to-3D Driving Demo</h2>
-          <div class="content has-text-justified">
-
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/dLJRgjtmlYU?loop=1&rel=0&amp;showinfo=0" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">6Img-to-3D Zero-Shot on NuScenes</h2>
-          <div class="content has-text-justified">
-
-            <div class="publication-video">
-              <iframe src="https://www.youtube.com/embed/jEBOjDZbqw0?loop=1&rel=0&amp;showinfo=0" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -180,14 +146,16 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              We propose 6Img-to-3D, a transformer-based encoder-renderer method. 6Img-to-3D generates
-              3D-consistent multi-view images for large-scale unbounded outdoor driving scenarios from only six
-              input
-              images. Existing approaches require detailed pose information and cannot reconstruct occluded regions
-              faithfully. We take a step towards resolving these shortcomings by combining cross- and self-attention
-              mechanisms for triplane parameterization with differentiable volume rendering. We showcase that six
-              surround-view vehicle cameras without absolute pose information are enough to reconstruct 360° scenes
-              during inference time.
+              SEED4D is a large-scale synthetic multi-view dynamic 4D driving dataset, data generator and benchmarks. 
+              Models for egocentric 3D and 4D reconstruction, including few-shot interpolation and extrapolation settings, 
+              can benefit from having images from exocentric viewpoints as supervision signals. No existing dataset provides 
+              the necessary mixture of complex, dynamic, and multi-view data. To facilitate the development of 3D and 4D reconstruction 
+              methods in the autonomous driving context, we propose a Synthetic Ego--Exo Dynamic 4D (SEED4D) dataset. SEED4D encompasses 
+              two large-scale multi-view synthetic urban scene datasets. Our static (3D) dataset encompasses 212K inward- and outward-facing 
+              vehicle images from 2K scenes, while our dynamic (4D) dataset contains 16.8M images from 10K trajectories, each sampled at 100 
+              points in time with egocentric images, exocentric images, and LiDAR data. We additionally present a customizable, easy-to-use 
+              data generator for spatio-temporal multi-view data creation. Our open-source data generator allows the creation of synthetic 
+              data for camera setups commonly used in the NuScenes, KITTI360, and Waymo datasets.
             </p>
           </div>
         </div>

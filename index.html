@@ -65,7 +65,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title"><a href="index.html">6Img-to-3D</a></h1>
+            <h1 class="title is-1 publication-title"><a href="index.html">SEED4D</a></h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
                 <a href="https://twitter.com/marten_marius">Marius Kaestingschaefer*</a><sup>2</sup>,</span>
@@ -204,74 +204,10 @@
           style="width: 100%; height: auto;">
       </div>
 
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Results</h2>
-
-          <div class="content has-text-justified">
-            <table class="styled-table">
-              <thead>
-                <tr>
-                  <th>Method</th>
-                  <th>PSNR <span style="vertical-align: super;">↑</span></th>
-                  <th>SSIM <span style="vertical-align: super;">↑</span></th>
-                  <th>LPIPS <span style="vertical-align: super;">↓</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>PixelNeRF</td>
-                  <td>15.263</td>
-                  <td>0.695</td>
-                  <td>0.673</td>
-                </tr>
-                <tr>
-                  <td>w/o Scene Contraction</td>
-                  <td>17.493</td>
-                  <td>0.726</td>
-                  <td>0.479</td>
-                </tr>
-                <tr>
-                  <td>w/o LPIPS Loss</td>
-                  <td>18.953</td>
-                  <td>0.736</td>
-                  <td>0.538</td>
-                </tr>
-                <tr>
-                  <td>w/o Image Feature Proj.</td>
-                  <td>18.440</td>
-                  <td>0.726</td>
-                  <td>0.488</td>
-                </tr>
-                <tr>
-                  <td>w SwinFIR Upscaler</td>
-                  <td>19.188</td>
-                  <td>0.746</td>
-                  <td>0.444</td>
-                </tr>
-                <tr>
-                  <td>6Img-to-3D (Ours)</td>
-                  <td>18.864</td>
-                  <td>0.733</td>
-                  <td>0.453</td>
-                </tr>
-              </tbody>
-            </table>
-
-          </div>
-        </div>
-      </div>
-
-
       <!--/ Concurrent Work. -->
     </div>
-
-
-
     </div>
   </section>
-
 
 
   <section class="section">
@@ -279,7 +215,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Inward-Outward Dataset</h2>
+          <h2 class="title is-3">SEED4D Datasets</h2>
           <div class="content has-text-justified">
             <p>
               Suitable dataset for the task of reconstructing scenes from outward-looking cameras onboard of a
@@ -422,76 +358,6 @@
         </div>
       </div>
 
-  </section>
-
-
-  <section class="hero teaser">
-    <div class="row">
-
-      <div class="column-2 has-text-centered">
-        <div class="content-container">
-          <p>
-            <span class="dnerf">PixelNeRF</span>
-          </p>
-          <div class="video-compare-container">
-            <video class="video" id="mesh0" loop autoplay muted src="./static/videos/comp/pixelnerf_ring/2.mp4"
-              onplay="resizeAndPlay(this)"></video>
-            <canvas class="videoMerge" id="mesh0Merge"></canvas>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="column-2 has-text-centered">
-        <div class="content-container">
-          <p>
-            <span class="dnerf">6Img-to-3D</span>
-          </p>
-          <div class="video-compare-container">
-            <video class="video" id="mesh3" loop autoplay muted src="./static/videos/comp/full_ring/3.mp4"
-              onplay="resizeAndPlay(this)"></video>
-            <canvas class="videoMerge" id="mesh3Merge"></canvas>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-
-
-    <div class="row">
-      <div class="column-2 has-text-centered">
-        <div class="content-container">
-          <p>
-            <span class="dnerf">PixelNeRF</span>
-          </p>
-          <div class="video-compare-container">
-            <video class="video" id="mesh8" loop autoplay muted src="./static/videos/comp/pixelnerf_ring/1.mp4"
-              onplay="resizeAndPlay(this)"></video>
-            <canvas class="videoMerge" id="mesh8Merge"></canvas>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="column-2 has-text-centered">
-        <div class="content-container">
-          <p>
-            <span class="dnerf">6Img-to-3D</span>
-          </p>
-          <div class="video-compare-container">
-            <video class="video" id="mesh7" loop autoplay muted src="./static/videos/comp/full_ring/2.mp4"
-              onplay="resizeAndPlay(this)"></video>
-            <canvas class="videoMerge" id="mesh7Merge"></canvas>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
   </section>
 
   <section>
@@ -648,13 +514,13 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@misc{gieruc20246imgto3d,
-      title={6Img-to-3D: Few-Image Large-Scale Outdoor Driving Scene Reconstruction}, 
-      author={Théo Gieruc and Marius Kästingschäfer and Sebastian Bernhard and Mathieu Salzmann},
+      <pre><code>@misc{seed4d,
+      title={SEED4D: Few-Image Large-Scale Outdoor Driving Scene Reconstruction}, 
+      author={Marius Kästingschäfer and Théo Gieruc and Sebastian Bernhard and Dylan Campbell and Eldar Insafutdinov and Eyvaz Najafli and Thomas Brox },
       year={2024},
-      eprint={2404.12378},
+      eprint={},
       archivePrefix={arXiv},
-      primaryClass={cs.CV}
+      primaryClass={}
 }</code></pre>
     </div>
   </section>
@@ -668,39 +534,6 @@
       href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for the website template.
     </div>
   </section>
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
-          <i class="fas fa-file-pdf"></i>
-        </a>
-        <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website is licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>, and comes from <a
-                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-            </p>
-            <p>
-              This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
-                code</a> of this website,
-              we just ask that you link back to this page in the footer.
-              Please remember to remove the analytics code included in the header of the website which
-              you do not want on your website.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
 </body>
 

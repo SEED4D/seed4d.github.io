@@ -1,13 +1,18 @@
-# 6Img-to-3D
+# SEED
 
-This repository contains only the website of [6Img-to-3D Website](https://6img-to-3d.github.io/).
+This repository contains the website of [SEED4D](https://seed4d.github.io/).
 
-Please find the source code ouf our paper here [6Img-to-3D Source Code](https://github.com/continental/6Img-to-3D).
+If you find SEED4D useful for your work please cite:
 
+```
+@article{seed4d,
+    title={SEED4D: Large-Scale Synthetic Multi-view Dynamic 4D Driving Dataset, Data Generator and Benchmarks}, 
+    author={Marius Kästingschäfer and Théo Gieruc and Sebastian Bernhard and Dylan Campbell and Eldar Insafutdinov and Eyvaz Najafli and Thomas Brox },
+    year={2024},
+    eprint={},
+    archivePrefix={arXiv},
+    primaryClass={}
+}
 
 # Acknowledgement
-Thanks to [Nerfies](https://github.com/nerfies/nerfies.github.io) for the website template.
-
-
-# Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+We thank [Nerfies](https://github.com/nerfies/nerfies.github.io) for the website template.

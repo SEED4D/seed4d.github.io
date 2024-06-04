@@ -1,4 +1,4 @@
-# SEED
+# SEED4D
 
 This repository contains the website of [SEED4D](https://seed4d.github.io/).
 
@@ -13,6 +13,7 @@ If you find SEED4D useful for your work please cite:
     archivePrefix={arXiv},
     primaryClass={}
 }
+```
 
 # Acknowledgement
 We thank [Nerfies](https://github.com/nerfies/nerfies.github.io) for the website template.

@@ -68,19 +68,23 @@
             <h1 class="title is-1 publication-title"><a href="index.html">SEED4D</a></h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://twitter.com/marten_marius">Marius Kaestingschaefer*</a><sup>2</sup>,</span>
-                <a href="https://github.com/tgieruc">Théo Gieruc*</a><sup>1,2</sup>,</span>
-                <a href="https://www.linkedin.com/in/dr-ing-sebastian-bernhard-79a763205/"">Sebastian Bernhard</a><sup>2</sup>,</span>
-                <a href="https://sites.google.com/view/djcampbell">Dylan Campbell</a><sup>1</sup></span>
-                <a href="https://eldar.insafutdinov.com/">Eldar Insafutdinov</a><sup>1</sup></span>
-                <a href="https://www.linkedin.com/in/eyvaz-najafli-43407618b/">Eyvaz Najafli </a><sup>1</sup></span>
-                <a href="https://lmb.informatik.uni-freiburg.de/people/brox/index.en.html">Thomas Brox </a><sup>1</sup></span>
+                <a href="https://twitter.com/marten_marius">Marius Kaestingschaefer</a><sup>1,2</sup>,</span>
+                <a href="https://github.com/tgieruc">Théo Gieruc</a><sup>1</sup>,</span>
+                <a href="https://www.linkedin.com/in/dr-ing-sebastian-bernhard-79a763205/"">Sebastian Bernhard</a><sup>1</sup>,</span>
+                <a href=""><br></a><sup></sup></span>
+                <a href="https://sites.google.com/view/djcampbell">Dylan Campbell</a><sup>3</sup></span>
+                <a href="https://eldar.insafutdinov.com/">Eldar Insafutdinov</a><sup>4</sup></span>
+                <a href="https://www.linkedin.com/in/eyvaz-najafli-43407618b/">Eyvaz Najafli </a><sup>1,5</sup></span>
+                <a href="https://lmb.informatik.uni-freiburg.de/people/brox/index.en.html">Thomas Brox </a><sup>2</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>EPFL,</span>
-              <span class="author-block"><sup>2</sup>Continental AG,</span>
-              <span class="author-block">*denotes equal contribution </span>
+              <span class="author-block"><sup>1</sup>Continental AG,</span>
+              <span class="author-block"><sup>2</sup>University of Freiburg,</span>
+              <span class="author-block"><sup>3</sup>Australian National University,</span>
+              <a href=""><br></a><sup></sup></span>
+              <span class="author-block"><sup>4</sup>University of Oxford,</span>
+              <span class="author-block"><sup>5</sup>University of Tübingen,</span>
             </div>
 
             <div class="column has-text-centered">
@@ -123,7 +127,18 @@
                     </span>
                     <span>Code</span>
                   </a>
-
+                </span>
+                <!-- Dataset Link. -->
+                  <span class="link-block">
+                    <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="far fa-images"></i>
+                      </span>
+                      <span>Data</span>
+                    </a>
+                  </span>
+                </div>
               </div>
 
             </div>
@@ -146,11 +161,11 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              SEED4D is a large-scale synthetic multi-view dynamic 4D driving dataset, data generator and benchmarks. 
+               <strong> SEED4D is a large-scale synthetic multi-view dynamic 4D driving dataset, data generator and benchmarks.</strong> 
               Models for egocentric 3D and 4D reconstruction, including few-shot interpolation and extrapolation settings, 
               can benefit from having images from exocentric viewpoints as supervision signals. No existing dataset provides 
               the necessary mixture of complex, dynamic, and multi-view data. To facilitate the development of 3D and 4D reconstruction 
-              methods in the autonomous driving context, we propose a Synthetic Ego--Exo Dynamic 4D (SEED4D) dataset. SEED4D encompasses 
+              methods in the autonomous driving context, we propose a <b>Synthetic Ego--Exo Dynamic 4D (SEED4D)</b>   dataset. SEED4D encompasses 
               two large-scale multi-view synthetic urban scene datasets. Our static (3D) dataset encompasses 212K inward- and outward-facing 
               vehicle images from 2K scenes, while our dynamic (4D) dataset contains 16.8M images from 10K trajectories, each sampled at 100 
               points in time with egocentric images, exocentric images, and LiDAR data. We additionally present a customizable, easy-to-use 
@@ -160,62 +175,183 @@
           </div>
         </div>
       </div>
-      <!--/ Abstract. -->
-
-
+      <div class="column is-full-width">
+        <img src="./static/images/paper_overview.PNG" alt="Image description"
+          style="width: 100%; height: auto;">
+      </div>
     </div>
   </section>
-
-
 
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Method</h2>
+          <h2 class="title is-3">Datasets</h2>
           <div class="content has-text-justified">
             <p>
-              The pixel-aligned image features from the six outward-looking images are indivually extracted using a
-              pre-trained ResNet-101 followed by a Feature Pyramidal Network (FPN). The features are then projected
-              into
-              a triplane using deformable attention. The renderer is a shallow MLP, which takes the triplane latent
-              3D
-              features concatenated to the corresponding 2D image features, obtained by projecting the 3D
-              coordinates
-              into the 2D image space. The renderer outputs the color and opacity of the 3D features. The color and
-              opacity are then used to render the 3D features into the 2D image space, using volumetric rendering.
-              The
-              rendered 2D images are then used to compute the loss, which is backpropagated through the entire
-              network.
-              The entire network is trained end-to-end.
+              <strong> Static Ego-Exo Dataset.</strong> 
+
+
+              <strong> Dynamic Ego-Exo Dataset.</strong> 
             </p>
             <p>
               In order to further improve the quality of the rendered images and speed up the inference, the images
               are
               rendered at a lower resolution and then upsampled using SwinFIR.
             </p>
-
           </div>
-
         </div>
       </div>
       <div class="column is-full-width">
-        <img src="./static/images/method_6Img-to-3D_v3.drawio.png" alt="Image description"
+        <img src="./static/images/overview_datasets.PNG" alt="Image description"
           style="width: 100%; height: auto;">
       </div>
-
       <!--/ Concurrent Work. -->
     </div>
     </div>
   </section>
 
+  <section class="section">
+  <div class="container is-max-desktop">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+        <h2 class="title is-3">Benchmark Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            <strong> Multi-view Novel View Synthesis.</strong> We evaluate how well existing methods can reconstruct the scene given many spherical views. 
+            We divide the 100 spherical views into training and test data using an 80/20 split.
+          </p>
+          <p>
+            <strong> Monocular Metric Depth Estimation.</strong> Since our dataset contains ground truth depth maps we evaluated two recent monocular metric depth estimation methods.
+             The methods we tested without further fine-tuning them on our data.
+          </p>
+          <p>
+            <strong> Single-shot Few-Image Scene Reconstruction.</strong> For performing few-image-to-3D reconstruction, we deviate from many of the existing comparisons by 
+            targeting an automotive use-case and, hence evaluated the performance of methods on egocentric outward-facing views while supervising resulting novel
+             views with  360° exocentrical spherical views.
+         </p>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Evaluation</th>
+                        <th>Method</th>
+                        <th>PSNR <span style="vertical-align: super;">↑</span></th>
+                        <th>SSIM <span style="vertical-align: super;">↑</span></th>
+                        <th>LPIPS <span style="vertical-align: super;">↓</span></th>
+                        <th>RMSE (m) <span style="vertical-align: super;">↓</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Multi-view</td>
+                        <td>K-Planes</td>
+                        <td>11.748</td>
+                        <td>0.533</td>
+                        <td>0.743</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-view</td>
+                        <td>SplatFacto</td>
+                        <td>15.366</td>
+                        <td>0.677</td>
+                        <td>0.540</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                        <td>Multi-view</td>
+                        <td>SplatFacto-big</td>
+                        <td>A</td>
+                        <td>B</td>
+                        <td>C</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                      <td>Multi-view</td>
+                        <td>NeRFacto</td>
+                        <td>24.408</td>
+                        <td>0.784</td>
+                        <td>0.278</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                        <td>Monocular Depth</td>
+                        <td>Metric3D</td>
+                        <td>&times;</td>
+                        <td>&times;</td>
+                        <td>&times;</td>
+                        <td>2.214</td>
+                    </tr>
+                    <tr>
+                        <td>Monocular Depth</td>
+                        <td>ZoeDepth</td>
+                        <td>&times;</td>
+                        <td>&times;</td>
+                        <td>&times;</td>
+                        <td>3.045</td>
+                    </tr>
+                    <tr>
+                        <td>Few-view</td>
+                        <td>K-Planes</td>
+                        <td>10.760</td>
+                        <td>0.421</td>
+                        <td>0.775</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                        <td>Few-view</td>
+                        <td>SplatFacto</td>
+                        <td>8.788</td>
+                        <td>0.450</td>
+                        <td>0.793</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                        <td>Few-view</td>
+                        <td>NeRFacto</td>
+                        <td>11.957</td>
+                        <td>0.243</td>
+                        <td>0.868</td>
+                        <td>&times;</td>
+                    </tr>
+                    <tr>
+                      <td>Few-view</td>
+                        <td>PixelNeRF</td>
+                        <td>15.263</td>
+                        <td>0.695</td>
+                        <td>0.673</td>
+                        <td>7.119</td>
+                    </tr>
+                    <tr>
+                      <td>Few-view</td>
+                        <td>SplatterImage</td>
+                        <td>17.819</td>
+                        <td>0.570</td>
+                        <td>0.585</td>
+                        <td>7.872</td>
+                    </tr>
+                    <tr>
+                      <td>Few-view</td>
+                        <td>6Img-to-3D</td>
+                        <td>18.864</td>
+                        <td>0.733</td>
+                        <td>0.453</td>
+                        <td>0.790</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
 
   <section class="section">
-
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">SEED4D Datasets</h2>
+          <h2 class="title is-3">Sensors</h2>
           <div class="content has-text-justified">
             <p>
               Suitable dataset for the task of reconstructing scenes from outward-looking cameras onboard of a
@@ -234,8 +370,8 @@
 
       <div class="columns is-centered  has-text-centered">
         <div class="column is-full-width">
-          <img src="./static/images/composition.png" alt="Image description"
-            style="width: 50%; height: auto; float: center;">
+          <img src="./static/images/sensors.png" alt="Image description"
+            style="width: 100%; height: auto; float: center;">
         </div>
       </div>
       <div class="column has-text-centered">
@@ -250,10 +386,9 @@
       <div class="columns is-centered">
         <!-- Visual Effects. -->
         <div class="column">
-
           <div class="content">
             <div class="video-compare-container">
-              <video class="video" id="dataset1" loop autoplay muted src="./static/videos/dataset/bbox_sem.mp4"
+              <video class="video" id="dataset1" loop autoplay muted src="./static/videos/dataset/inst_depth.mp4"
                 onplay="resizeAndPlay(this)"></video>
               <canvas height="0" class="videoMerge" id="dataset1Merge"></canvas>
             </div>
@@ -266,7 +401,7 @@
           <div class="columns is-centered">
             <div class="column content">
               <div class="video-compare-container">
-                <video class="video" id="dataset2" loop autoplay muted src="./static/videos/dataset/inst_depth.mp4"
+                <video class="video" id="dataset2" loop autoplay muted src="./static/videos/dataset/bbox_sem.mp4"
                   onplay="resizeAndPlay(this)"></video>
                 <canvas height="0" class="videoMerge" id="dataset2Merge"></canvas>
               </div>
@@ -274,96 +409,90 @@
           </div>
         </div>
       </div>
-
-      <div class="columns is-centered has-text-justified">
-        <div class="column is-four-fifths">
-          <table class="styled-table">
-            <thead>
-              <tr>
-                <th>Town</th>
-                <th>Number of Scenes</th>
-                <th>Split</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Town01</td>
-                <td>255</td>
-                <td>Train</td>
-                <td>A small, simple town with a river and several bridges.</td>
-              </tr>
-              <tr>
-                <td>Town03</td>
-                <td>265</td>
-                <td>Train</td>
-                <td>A larger, urban map with a roundabout and large junctions.</td>
-              </tr>
-              <tr>
-                <td>Town04</td>
-                <td>372</td>
-                <td>Train</td>
-                <td>A small town embedded in the mountains with a special "figure of 8" infinite highway.</td>
-              </tr>
-              <tr>
-                <td>Town05</td>
-                <td>302</td>
-                <td>Train</td>
-                <td>Squared-grid town with cross junctions and a bridge. It has multiple lanes per direction. Useful
-                  to
-                  perform lane changes.</td>
-              </tr>
-              <tr>
-                <td>Town06</td>
-                <td>436</td>
-                <td>Train</td>
-                <td>Long many lane highways with many highway entrances and exits. It also has a Michigan left.</td>
-              </tr>
-              <tr>
-                <td>Town07</td>
-                <td>116</td>
-                <td>Train</td>
-                <td>A rural environment with narrow roads, corn, barns and hardly any traffic lights.</td>
-              </tr>
-              <tr>
-                <td>Town10</td>
-                <td>155</td>
-                <td>Train</td>
-                <td>A downtown urban environment with skyscrapers, residential buildings and an ocean promenade.
-                </td>
-              </tr>
-              <tr>
-                <td>Town02</td>
-                <td>101</td>
-                <td>Val</td>
-                <td>A small simple town with a mixture of residential and commercial buildings.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
   </section>
 
-  <section>
+
+
+  <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column is-full-width">
-
-
           <div class="content has-text-centered">
-            <h2 class="title is-3"><a href="gallery.html">Gallery</a></h2>
-
+            <h2 class="title is-3">Towns</a></h2>
+          </div>
+        <div class="columns is-centered has-text-justified">
+          <div class="column is-four-fifths">
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Town</th>
+                  <th>Number of Scenes</th>
+                  <th>Split</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Town01</td>
+                  <td>255</td>
+                  <td>Train</td>
+                  <td>A small, simple town with a river and several bridges.</td>
+                </tr>
+                <tr>
+                  <td>Town03</td>
+                  <td>265</td>
+                  <td>Train</td>
+                  <td>A larger, urban map with a roundabout and large junctions.</td>
+                </tr>
+                <tr>
+                  <td>Town04</td>
+                  <td>372</td>
+                  <td>Train</td>
+                  <td>A small town embedded in the mountains with a special "figure of 8" infinite highway.</td>
+                </tr>
+                <tr>
+                  <td>Town05</td>
+                  <td>302</td>
+                  <td>Train</td>
+                  <td>Squared-grid town with cross junctions and a bridge. It has multiple lanes per direction. Useful
+                    to
+                    perform lane changes.</td>
+                </tr>
+                <tr>
+                  <td>Town06</td>
+                  <td>436</td>
+                  <td>Train</td>
+                  <td>Long many lane highways with many highway entrances and exits. It also has a Michigan left.</td>
+                </tr>
+                <tr>
+                  <td>Town07</td>
+                  <td>116</td>
+                  <td>Train</td>
+                  <td>A rural environment with narrow roads, corn, barns and hardly any traffic lights.</td>
+                </tr>
+                <tr>
+                  <td>Town10</td>
+                  <td>155</td>
+                  <td>Train</td>
+                  <td>A downtown urban environment with skyscrapers, residential buildings and an ocean promenade.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Town02</td>
+                  <td>101</td>
+                  <td>Val</td>
+                  <td>A small simple town with a mixture of residential and commercial buildings.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-
   </section>
 
   <section>
     <div class="container is-max-desktop">
-
-
       <div class="columns is-centered">
         <div class="column is four-fifths">
           <table class="town-table">
@@ -528,9 +657,8 @@
   
   <section class="section" id="Ack">
     <div class="container is-max-desktop content">
-      <h2 class="title">Acknowledgement</h2> The research leading to these results is partially funded by the German Federal Ministry for Economic Affairs and Climate Action within the project “NXT GEN AI METHODS". 
-      The authors wish to extend their sincere gratitude to the creators of TPVformer, NeRFStudio, and the KPlanes paper for generously open-sourcing their code.
-      Thanks to <a
+      <h2 class="title">Acknowledgement</h2>
+      We thank <a
       href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for the website template.
     </div>
   </section>
